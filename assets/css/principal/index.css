@@ -1,0 +1,285 @@
+@import url("fonts.css");
+
+* {
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+html {
+  --u: 1.5vmin;
+  --c1: hsl(0deg 0% 0%);
+  --c2: hsl(212deg 4% 9%);
+  --c3: hsl(212deg 7% 36%);
+  --gp: 50% / calc(var(--u) * 5) calc(var(--u) * 10);
+  --bp: calc(var(--u) * -2.5) calc(var(--u) * -5);
+  height: 100vh;
+  --bg: radial-gradient(circle at 50% 25%, var(--c2) 23%, #fff0 25% 100%)
+      var(--gp),
+    conic-gradient(from 270deg at 34% 46%, var(--c2) 0 12.5%, #fff0 0 100%)
+      var(--gp),
+    conic-gradient(from 45deg at 66% 46%, var(--c2) 0 12.5%, #fff0 0 100%)
+      var(--gp),
+    conic-gradient(from 180deg at 50% 80%, var(--c2) 0 12.5%, #fff0 0 100%)
+      var(--gp),
+    conic-gradient(from 135deg at 50% 80%, var(--c2) 0 12.5%, #fff0 0 100%)
+      var(--gp),
+    conic-gradient(from 0deg at 0% 20%, var(--c2) 0 12.5%, #fff0 0 100%)
+      var(--gp),
+    conic-gradient(from -45deg at 100% 20%, var(--c2) 0 12.5%, #fff0 0 100%)
+      var(--gp),
+    linear-gradient(
+        180deg,
+        var(--c2) 0 4.5%,
+        #fff0 0 45.25%,
+        var(--c2) 0 50%,
+        #fff0 0% 100%
+      )
+      var(--gp),
+    radial-gradient(
+        circle at 50% 25%,
+        #fff0 0 25%,
+        var(--c2) 26% 32%,
+        #fff0 0 100%
+      )
+      var(--gp),
+    linear-gradient(165deg, var(--c3) -15%, var(--c1) 44%, #fff0 0 100%)
+      var(--gp),
+    linear-gradient(180deg, var(--c1) 50%, #fff0 0 100%) var(--gp);
+  background: var(--bg), var(--bg);
+  background-position: var(--bp), var(--bp), var(--bp), var(--bp), var(--bp),
+    var(--bp), var(--bp), var(--bp), var(--bp), var(--bp), var(--bp), 0 0, 0 0,
+    0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+  background-color: var(--c2);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  font-size: 10vmin;
+  color: rgb(185, 185, 205);
+  text-align: center;
+  text-shadow: 3px 1px 11px rgba(250, 245, 245, 0.304);
+  font-weight: 800;
+  margin: 1rem 0 5rem 2rem;
+}
+
+.typewriter {
+  --caret: currentcolor;
+}
+
+.typewriter::before {
+  content: "";
+  animation: typing 13.5s infinite;
+}
+
+.typewriter::after {
+  content: "";
+  border-right: 1px solid var(--caret);
+  animation: blink 0.5s linear infinite;
+}
+
+/* Animacion */
+@keyframes typing {
+  0.0000%,
+  27.3488% {
+    content: "";
+  }
+  1.1395%,
+  26.2093% {
+    content: "c";
+  }
+  2.2791%,
+  25.0698% {
+    content: "ca";
+  }
+  3.4186%,
+  23.9302% {
+    content: "car";
+  }
+  4.5581%,
+  22.7907% {
+    content: "carp";
+  }
+  5.6977%,
+  21.6512% {
+    content: "carpe";
+  }
+  6.8372%,
+  20.5116% {
+    content: "carpet";
+  }
+  7.9767%,
+  19.3721% {
+    content: "carpeta";
+  }
+  9.1163%,
+  18.2326% {
+    content: "carpetas";
+  }
+
+  30.7674%,
+  56.2791% {
+    content: "";
+  }
+  31.9070%,
+  55.1395% {
+    content: "a";
+  }
+  33.0465%,
+  54.0000% {
+    content: "ar";
+  }
+  34.1860%,
+  53.8605% {
+    content: "arc";
+  }
+  35.3256%,
+  52.7209% {
+    content: "arch";
+  }
+  36.4651%,
+  51.5814% {
+    content: "archi";
+  }
+  37.6047%,
+  50.4419% {
+    content: "archiv";
+  }
+  38.6047%,
+  49.4419% {
+    content: "archivo";
+  }
+  39.6047%,
+  48.4419% {
+    content: "archivos";
+  }
+
+  60.6977%,
+  90.2093% {
+    content: "";
+  }
+  61.8372%,
+  89.0698% {
+    content: "d";
+  }
+  62.9767%,
+  88.9302% {
+    content: "do";
+  }
+  63.1163%,
+  87.7907% {
+    content: "doc";
+  }
+  64.2558%,
+  86.6512% {
+    content: "docu";
+  }
+  65.3953%,
+  85.5116% {
+    content: "docum";
+  }
+  66.5349%,
+  84.3721% {
+    content: "docume";
+  }
+  67.5349%,
+  83.3721% {
+    content: "documen";
+  }
+  68.5349%,
+  82.3721% {
+    content: "document";
+  }
+  69.5349%,
+  81.3721% {
+    content: "documento";
+  }
+  70.5349%,
+  80.3721% {
+    content: "documentos";
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.typewriter.thick::after {
+  border-right: 1ch solid var(--caret);
+}
+
+.typewriter.nocaret::after {
+  border-right: 0;
+}
+
+.con_buttons {
+  text-align: center;
+}
+
+.button {
+  align-items: center;
+  appearance: none;
+  background-color: #fcfcfd;
+  border-radius: 10px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  color: #36395a;
+  cursor: pointer;
+  display: inline-flex;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding: 40px 16px;
+
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.button {
+  box-shadow: #d6d6e7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+}
+
+.button:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #c0c0ce 0 -3px 0 inset;
+  transform: translateY(-2px);
+  background-color: #e2e2e8;
+}
+
+.button:active {
+  box-shadow: #d6d6e7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+/* RESPONSIVE */
+
+@media (width <= 600px) {
+  .button {
+    padding: 20px 12px;
+    font-size: 20px;
+  }
+}

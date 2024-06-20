@@ -1,0 +1,296 @@
+@import url("../principal/fonts.css");
+
+:root {
+  --color-principal: rgb(72, 72, 210);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+html {
+  --u: 1.5vmin;
+  --c1: hsl(0deg 0% 0%);
+  --c2: hsl(212deg 4% 9%);
+  --c3: hsl(212deg 7% 36%);
+  --gp: 50% / calc(var(--u) * 5) calc(var(--u) * 10);
+  --bp: calc(var(--u) * -2.5) calc(var(--u) * -5);
+  height: 100vh;
+  --bg: radial-gradient(circle at 50% 25%, var(--c2) 23%, #fff0 25% 100%)
+      var(--gp),
+    conic-gradient(from 270deg at 34% 46%, var(--c2) 0 12.5%, #fff0 0 100%)
+      var(--gp),
+    conic-gradient(from 45deg at 66% 46%, var(--c2) 0 12.5%, #fff0 0 100%)
+      var(--gp),
+    conic-gradient(from 180deg at 50% 80%, var(--c2) 0 12.5%, #fff0 0 100%)
+      var(--gp),
+    conic-gradient(from 135deg at 50% 80%, var(--c2) 0 12.5%, #fff0 0 100%)
+      var(--gp),
+    conic-gradient(from 0deg at 0% 20%, var(--c2) 0 12.5%, #fff0 0 100%)
+      var(--gp),
+    conic-gradient(from -45deg at 100% 20%, var(--c2) 0 12.5%, #fff0 0 100%)
+      var(--gp),
+    linear-gradient(
+        180deg,
+        var(--c2) 0 4.5%,
+        #fff0 0 45.25%,
+        var(--c2) 0 50%,
+        #fff0 0% 100%
+      )
+      var(--gp),
+    radial-gradient(
+        circle at 50% 25%,
+        #fff0 0 25%,
+        var(--c2) 26% 32%,
+        #fff0 0 100%
+      )
+      var(--gp),
+    linear-gradient(165deg, var(--c3) -15%, var(--c1) 44%, #fff0 0 100%)
+      var(--gp),
+    linear-gradient(180deg, var(--c1) 50%, #fff0 0 100%) var(--gp);
+  background: var(--bg), var(--bg);
+  background-position: var(--bp), var(--bp), var(--bp), var(--bp), var(--bp),
+    var(--bp), var(--bp), var(--bp), var(--bp), var(--bp), var(--bp), 0 0, 0 0,
+    0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+  background-color: var(--c2);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.login-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+.login-box .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: var(--color-principal);
+  font-size: 12px;
+}
+
+.login-box form button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: var(--color-principal);
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  margin-top: 10px;
+  letter-spacing: 4px;
+}
+
+.login-box button:hover {
+  background: var(--color-principal);
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px var(--color-principal), 0 0 10px var(--color-principal),
+    0 0 10px var(--color-principal), 0 0 10px var(--color-principal);
+  cursor: pointer;
+}
+
+.login-box button span {
+  position: absolute;
+  display: block;
+}
+
+.login-box button span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-principal));
+  animation: btn-anim1 1s linear infinite;
+}
+
+/*Animacion 1*/
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.login-box button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, var(--color-principal));
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+/*Animacion 2*/
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+input[type="file"] {
+  display: none;
+  margin: 0 auto;
+}
+
+input[type="file"]:focus + .input_imagen_jugador {
+  background-color: #fff;
+}
+
+.input_imagen_jugador {
+  border: 1px solid #707070;
+  display: block;
+  text-align: center;
+  padding: 10px 12px;
+  cursor: pointer;
+  margin: 0 auto;
+  border-radius: 5px;
+  background-color: #000;
+  color: #fff;
+  transition: 0.5s;
+  margin-bottom: 25px;
+}
+
+.input_imagen_jugador:hover {
+  background-color: rgb(23, 22, 23);
+}
+
+.login-box button span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, var(--color-principal));
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+/*Animacion 3*/
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.login-box button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, var(--color-principal));
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+/*Animacion 4*/
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+h4 {
+  color: var(--color-principal);
+  text-align: center;
+  font-weight: normal;
+}
+
+.link_regresar {
+  margin-left: 85px;
+  padding-bottom: 15px;
+  text-align: center;
+  display: inline-block;
+  width: 100px;
+  text-decoration: underline;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.link_regresar:hover {
+  color: rgb(224, 225, 226);
+}
+
+/* REPONSIVE */
+
+@media (width <= 600px) {
+  .login-box {
+    width: 350px;
+  }
+
+  .link_regresar {
+    margin-left: 45px;
+  }
+}

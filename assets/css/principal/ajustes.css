@@ -1,0 +1,280 @@
+.con_principal_ajustes {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.con_principal_ajustes h2 {
+  font-size: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid black;
+  margin-bottom: 30px;
+  background-color: var(--color-ajustes-principal);
+  padding-left: 16px;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.con_principal_ajustes h3 {
+  font-size: 30px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #000;
+  margin-bottom: 30px;
+  background-color: var(--color-ajustes-principal);
+  padding-left: 16px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+/*** IMAGEN PERFIL ***/
+
+.imagen-perfil {
+  color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: all 0.2s;
+  margin-right: 24px;
+}
+
+.imagen-perfil svg {
+  display: none;
+}
+
+.imagen-perfil input {
+  display: none;
+}
+
+.imagen-perfil img {
+  position: absolute;
+  object-fit: cover;
+  width: 120px;
+  height: 120px;
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  z-index: 0;
+  box-shadow: 10px 10px 47px -15px rgba(0, 0, 0, 0.75);
+}
+.imagen-perfil .-label {
+  cursor: pointer;
+  height: 120px;
+  width: 120px;
+  font-size: 0.8em;
+  text-align: center;
+}
+.imagen-perfil:hover .-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10000;
+  color: #fafafa;
+  transition: background-color 0.2s;
+  border-radius: 100px;
+  margin-bottom: 0;
+}
+
+.imagen-perfil .cont-icon-camera {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagen-perfil:hover svg {
+  display: block;
+}
+
+.imagen-perfil span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/************************/
+
+.usuario_info_imagen:hover {
+  background-color: var(--color-ajustes-secundario);
+}
+
+.ajustes_usuario_info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+.usuario_info_detalles {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  gap: 10px;
+}
+
+.usuario_info_nombre {
+  font-size: 17px;
+}
+
+.cambiar_correo,
+.cambiar_pass {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-left: 5px;
+}
+
+.eliminar_cuenta {
+  padding-left: 5px;
+}
+
+.usuario_info_email,
+.usuario_info_pass {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.usuario_info_nombre_titulo {
+  font-weight: 600;
+}
+
+.ajustes_email,
+.ajustes_pass,
+.ajustes_eliminar_cuenta {
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.btn_cambiar_correo,
+.btn_cambiar_pass {
+  color: #fff;
+  background-color: var(--color-ajustes-principal);
+  font-size: 18px;
+  border-radius: 10px;
+  padding: 15px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn_cambiar_correo:hover,
+.btn_cambiar_pass:hover {
+  background-color: rgb(54, 54, 54);
+}
+
+.btn_eliminar_cuenta {
+  padding: 0px;
+  font-size: 20px;
+  color: rgb(220, 3, 3);
+  background-color: transparent;
+  margin-bottom: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 600;
+}
+
+.btn_eliminar_cuenta:hover {
+  color: rgb(255, 14, 14);
+}
+
+/* REPONSIVE */
+
+@media (width <= 600px) {
+  .con_principal_ajustes {
+    padding-left: 20px;
+    padding-right: 10px;
+  }
+
+  .usuario_info_email,
+  .usuario_info_pass {
+    font-size: 14px;
+  }
+
+  .ajustes_email,
+  .ajustes_pass,
+  .ajustes_eliminar_cuenta {
+    font-size: 14px;
+  }
+
+  .btn_cambiar_correo,
+  .btn_cambiar_pass {
+    font-size: 13px;
+    padding: 5px 2px;
+  }
+
+  .btn_eliminar_cuenta {
+    font-size: 14px;
+  }
+}
+
+@media (600px < width < 768px) {
+  .con_principal_ajustes {
+    padding-left: 20px;
+    padding-right: 10px;
+  }
+
+  .usuario_info_email,
+  .usuario_info_pass {
+    font-size: 14px;
+  }
+
+  .ajustes_email,
+  .ajustes_pass,
+  .ajustes_eliminar_cuenta {
+    font-size: 14px;
+  }
+
+  .btn_cambiar_correo,
+  .btn_cambiar_pass {
+    font-size: 13px;
+    padding: 5px 2px;
+  }
+
+  .btn_eliminar_cuenta {
+    font-size: 14px;
+  }
+}
+
+@media (768px <= width < 992px) {
+  .con_principal_ajustes {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .usuario_info_email,
+  .usuario_info_pass {
+    font-size: 16px;
+  }
+
+  .ajustes_email,
+  .ajustes_pass,
+  .ajustes_eliminar_cuenta {
+    font-size: 16px;
+  }
+
+  .btn_cambiar_correo,
+  .btn_cambiar_pass {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .btn_eliminar_cuenta {
+    font-size: 16px;
+  }
+}
+
+@media (992px <= width < 1200px) {
+  .con_principal_ajustes {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
